@@ -9,8 +9,8 @@ ul{
 
 li a{
   height: auto;
-  width: 20rem;
-  border: 1px solid whitesmoke;
+  width: 19rem;
+  border: 2px solid whitesmoke;
   border-radius: 1rem;
   margin: 0.5rem;
   padding: 0.8rem;
@@ -23,7 +23,7 @@ li a{
 li a img{
   border-radius: 1rem;
   object-fit: cover;
-  height: 14.5rem;
+  height: 11rem;
 }
 
 li a:hover{

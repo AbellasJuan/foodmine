@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { RatingModule } from 'ng-starrating';
+import { SearchComponent } from './components/partials/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { TagsComponent } from './components/partials/tags/tags.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RatingModule
+    RatingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
