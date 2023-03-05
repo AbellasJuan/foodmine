@@ -13,10 +13,10 @@ export class HomeComponent {
 
   constructor(private foodService:FoodService, activatedRoute:ActivatedRoute){
     activatedRoute.params.subscribe((params) => {
-      //O console será mantido como objeto de estudo;
-      console.log('params:', params, 'noPropertyAccessFromIndexSignature:', params['searchTerm'], (params.searchTerm));
       if(params['searchTerm']){
         this.foods = this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
+      }else if(params.tag){
+        this.foods = this.foodService.getAllFoodsByTag(params.tag);
       }else{
         this.foods = this.foodService.getAll();
       }
