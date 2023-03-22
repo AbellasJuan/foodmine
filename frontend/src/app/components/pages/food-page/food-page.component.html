@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+  [visible]="!food.id"
+  notFoundMessage="Food Not Found"
+  resetLinkText="Back to Homepage!"
+></app-not-found>
+<div *ngIf="food.id" class="container">
   <img [src]="food.imageUrl" [alt]="food.name" />
 
   <div class="details">
@@ -25,21 +30,20 @@
       </span>
     </div>
     <div class="tags">
-      <a *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">{{tag}}</a>
+      <a *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">{{ tag }}</a>
     </div>
     <div class="cook-time">
       <span>
-        Time to cook about <strong>{{food.cookTime}}</strong> minutes
+        Time to cook about <strong>{{ food.cookTime }}</strong> minutes
       </span>
     </div>
 
     <div class="price">
       <span>
-        {{food.price | currency}}
+        {{ food.price | currency }}
       </span>
     </div>
 
     <button (click)="handleAddToCart()">Add to Cart</button>
-
   </div>
 </div>
